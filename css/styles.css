@@ -1,67 +1,35 @@
-*{
-  box-sizing: border-box;
-}
 body {
-  margin: auto;
-  font-size: 10px;
-  font-family: 'Slabo 27px', serif;
+    padding-top: 50px;
+    font-family: 'Slabo 27px', serif;
 }
 ul, ol{
-  margin: 0;
-  padding: 0;
-}
-.main-header{
-	width: 100%;
-  height: auto;
-	position: fixed;
-  top: 0;
-	z-index: 10;
-  background-color: #FFF;
-  /*opacity: 0.5;*/
-  /*border-bottom: solid 2px #C2B4FB;*/
+    margin: 0;
+    padding: 0;
 }
 .header1180{
-  width: 100%;
+    width: 100%;
 }
-.main-nav {
-  width: 100%;
+.navbar-main a {
+    font-weight: bold;
+    text-transform: uppercase;
 }
-.main-nav ul{
-	margin: 0;
-	padding: 0;
-	list-style-type: none;
-}
-.main-nav li{
-  /*display: inline-block;*/
-  text-align: center;
-}
-.main-nav a{
-	text-decoration: none;
-  text-transform: uppercase;
-  padding-right: 40px;
-  margin-left: 30px;
-  font-size: 80%;
-  font-weight: bold;
-  color: black;
-}
-.container{
-  width: 100%;
-  margin: auto;
-  background-color: #fff;
+.banner {
+    margin-bottom: 30px;
 }
 .banner img {
-  width: 100%;
-  display: inline-block;
+    width: 100%;
+    display: inline-block;
 }
 .banner h1{
-  position: absolute;
-  width: 100%;
-  bottom: 50%;
-  margin-left: 10%;
-  text-align:left;
-  color: #fff;
-  font-size: 150%;
-  font-style: italic;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 50%;
+    margin-left: 10%;
+    text-align:left;
+    color: #fff;
+    font-size: 150%;
+    font-style: italic;
 }
 /*.banner p{
   position: relative;
@@ -75,300 +43,292 @@ ul, ol{
   font-style: italic;
 }*/
 .img_product{
-  width: 100%;
-  /*float: inherit;*/
+    width: 100%;
+    /*float: inherit;*/
 }
 .product{
-  width: 30%;
-  margin: 3% 3% 0 1%;
-  position: relative;
-  float: left;
-  padding-bottom: 5%;
-  /*background-image: url(../images/torre_eifel_dibujo.jpg);*/
+    position: relative;
+    padding-bottom: 5%;
+    /*background-image: url(../images/torre_eifel_dibujo.jpg);*/
 }
 #productMargin{
-  margin-right: 0;
+    margin-right: 0;
 }
 .product ul{
-  list-style-type: none;
+    list-style-type: none;
 }
 .product li {
-  text-align: center;
+    text-align: center;
 }
 .product a{
-  text-decoration: none;
-  text-transform: uppercase;
+    text-decoration: none;
+    text-transform: uppercase;
 }
 .ulAcademic a{
-  color: black;
-  font-size: 1em;
-  font-weight: bold;
+    color: black;
+    font-size: 1em;
+    font-weight: bold;
 }
 .ulCulinary a{
-  color: black;
-  font-size: 1em;
-  font-weight: bold;
+    color: black;
+    font-size: 1em;
+    font-weight: bold;
 }
 .ulAperitif a{
-  color: black;
-  font-size: 1em;
-  font-weight: bold;
+    color: black;
+    font-size: 1em;
+    font-weight: bold;
 }
 #h2Academic {
-  position: absolute;
-  top: 0;
-  color: #fff;
-  font-size: 1.5em;
-  margin-left: 2%;
-  margin-top: 20%;
+    position: absolute;
+    top: 0;
+    color: #fff;
+    font-size: 1.5em;
+    margin-left: 2%;
+    margin-top: 20%;
 }
 #h2Culinary {
-  position: absolute;
-  top: 0;
-  color: #fff;
-  font-size: 1.5em;
-  margin-left: 45%;
+    position: absolute;
+    top: 0;
+    color: #fff;
+    font-size: 1.5em;
+    margin-left: 45%;
 }
 #h2Aperitif {
-  position: absolute;
-  top: -10%;
-  color: #fff;
-  font-size: 1.5em;
-  margin-left: 20%;
-  margin-top: 50%
+    position: absolute;
+    top: -10%;
+    color: #fff;
+    font-size: 1.5em;
+    margin-left: 20%;
+    margin-top: 50%
 }
 .footer{
-  clear: both;
-  padding-top: 0.5%;
-  font-size: 1.5em;
-  background-color: #7D8E99;
-  font-weight: bold;
+    clear: both;
+    padding-top: 0.5%;
+    font-size: 1.5em;
+    background-color: #7D8E99;
+    font-weight: bold;
 }
 .footer p{
-  margin-left: 1%;
+    margin-left: 1%;
 }
 #logoFacebook{
-  width: 30px;
-  margin: 1%;
-  display: inline-block;
+    width: 30px;
+    margin: 1%;
+    display: inline-block;
 }
 #logoTwitter{
-  width: 30px;
-  margin: 1%;
-  display: inline-block;
+    width: 30px;
+    margin: 1%;
+    display: inline-block;
 }
 #logoInstagram{
-  width: 30px;
-  margin: 1%;
-  display: inline-block;
+    width: 30px;
+    margin: 1%;
+    display: inline-block;
 
 }
 .faq{
-  width: 90%;
-  margin: 12% 5% 5%;
+    width: 90%;
 }
-.faq li{
-  font-size: 2em;
+.faq .question {
+    font-size: 2em;
 }
 .faq p{
-  font-size: 1.5em;
+    font-size: 1.5em;
 }
 .login-container{
-  width: 50%;
-  margin: 15% auto 9%;
-  background-image: url(../images/torre_eifel_dibujo.jpg);
+    width: 50%;
+    margin: 15% auto 9%;
+    background-image: url(../images/torre_eifel_dibujo.jpg);
 }
 .login {
-  padding: 10% 10%;
-  font-size: 1.5em;
+    padding: 10% 10%;
+    font-size: 1.5em;
 }
 .buttonRemindme{
-  border: none;
-  background-color: #D8BFD8;
-  color: white;
-  font-weight: bold;
-  padding: 1%;
+    border: none;
+    background-color: #D8BFD8;
+    color: white;
+    font-weight: bold;
+    padding: 1%;
 }
 .buttonForgot{
-  border: none;
-  background-color: #D8BFD8;
-  color: white;
-  font-weight: bold;
-  margin-left: 3%;
-  padding: 1%;
+    border: none;
+    background-color: #D8BFD8;
+    color: white;
+    font-weight: bold;
+    margin-left: 3%;
+    padding: 1%;
 }
 .registration-container{
-  width: 50%;
-  margin: 14% auto 5%;
-  background-image: url(../images/torre_eifel_dibujo.jpg);
+    margin: 0 auto;
+    background: url(../images/torre_eifel_dibujo.jpg) no-repeat 50% 50%;
+}
+.registration {
+    padding: 10px;
+    background-color: rgba(255,255,255,0.75);
 }
 .registration p{
-  font-size: 1.5em;
+    font-size: 1.5em;
 }
 .buttonSend{
-  border: none;
-  background-color: #D8BFD8;
-  color: white;
-  font-weight: bold;
-  padding: 1%;
+    border: none;
+    background-color: #D8BFD8;
+    color: white;
+    font-weight: bold;
+    padding: 1%;
 }
 
-@media (min-width: 550px) {
-  .main-nav li{
-    display: inline-block;
-  }
-  .main-nav a{
-  	text-decoration: none;
-    text-transform: uppercase;
-    padding-right: 40px;
-    margin-left: 30px;
-    font-size: 100%;
-    font-weight: bold;
-    color: black;
-  }
-  .banner h1{
-    position: fixed;
-    bottom: 45%;
-    margin-left: 10%;
-    width: 100%;
-    text-align:left;
-    color: #fff;
-    font-size: 200%;
-    font-style: italic;
-  }
-  /*.banner p{
-  position: relative;
-  bottom: -55%;
-  width: 100%;
-  color: #fff;
-  text-align: left;
-  margin-left: 15%;
-  font-size: 120%;
-  font-style: italic;
-  }*/
-  .container{
-    width: 100%;
-    margin: 10% auto 0;
-    background-color: #fff;
-  }
-  .product li {
-    text-align: center;
-  }
-  #h2Academic {
-    position: absolute;
-    top: 0;
-    color: #fff;
-    font-size: 1.5em;
-    margin-left: 2%;
-    margin-top: 20%;
-  }
-  #h2Culinary {
-    position: absolute;
-    top: 0;
-    color: #fff;
-    font-size: 1.5em;
-    margin-left: 55%;
-  }
-  #h2Aperitif {
-    position: absolute;
-    top: 0;
-    color: #fff;
-    font-size: 1.5em;
-    margin-left: 20%;
-    margin-top: 40%
-  }
-  .ulAcademic a{
-    color: black;
-    font-size: 1em;
-    font-weight: bold;
-  }
-  .ulCulinary a{
-    color: black;
-    font-size: 1em;
-    font-weight: bold;
-  }
-  .ulAperitif a{
-    color: black;
-    font-size: 1em;
-    font-weight: bold;
-  }
-  @media (min-width: 960px) {
-  .main-nav a{
-  	text-decoration: none;
-    text-transform: uppercase;
-    padding-right: 40px;
-    margin-left: 30px;
-    font-size: 150%;
-    font-weight: bold;
-    color: black;
+@media (min-width: 768px) {
+    .main-nav li{
+        display: inline-block;
     }
-  .banner h1{
-    position: absolute;
-    bottom: 45%;
-    margin-left: 10%;
-    width: 100%;
-    text-align:left;
-    color: #fff;
-    font-size: 3.5em;
-    font-style: italic;
-  }
-  /*.banner p{
+    .main-nav a{
+        text-decoration: none;
+        text-transform: uppercase;
+        padding-right: 40px;
+        margin-left: 30px;
+        font-size: 100%;
+        font-weight: bold;
+        color: black;
+    }
+    .banner h1{
+        position: fixed;
+        bottom: 45%;
+        margin-left: 10%;
+        text-align:left;
+        font-size: 200%;
+    }
+    /*.banner p{
     position: relative;
-    bottom: -105%;
+    bottom: -55%;
     width: 100%;
     color: #fff;
     text-align: left;
-    margin-left: 40%;
-    font-size: 190%;
-    font-weight: bold;
+    margin-left: 15%;
+    font-size: 120%;
     font-style: italic;
-  }*/
-  .container{
-    width: 100%;
-    margin: 10% auto 0;
-    background-color: #fff;
-  }
-  .product li {
-    text-align: center;
-  }
-  .ulAcademic a{
-    color: black;
-    font-size: 1.5em;
-    font-weight: bold;
-  }
-  .ulCulinary a{
-    color: black;
-    font-size: 1.5em;
-    font-weight: bold;
-  }
-  .ulAperitif a{
-    color: black;
-    font-size: 1.5em;
-    font-weight: bold;
-  }
-  #h2Academic {
-    position: absolute;
-    top: 0;
-    color: #fff;
-    font-size: 2em;
-    margin-left: 2%;
-    margin-top: 20%;
-  }
-  #h2Culinary {
-    position: absolute;
-    top: 0;
-    color: #fff;
-    font-size: 2em;
-    margin-left: 75%;
-  }
-  #h2Aperitif {
-    position: absolute;
-    top: 0;
-    color: #fff;
-    font-size: 2em;
-    margin-left: 20%;
-    margin-top: 50%
-  }
-  .registration-container input{
-    text-align: right;
-  }
+    }*/
+    .product li {
+        text-align: center;
+    }
+    #h2Academic {
+        position: absolute;
+        top: 0;
+        color: #fff;
+        font-size: 1.5em;
+        margin-left: 2%;
+        margin-top: 20%;
+    }
+    #h2Culinary {
+        position: absolute;
+        top: 0;
+        color: #fff;
+        font-size: 1.5em;
+        margin-left: 55%;
+    }
+    #h2Aperitif {
+        position: absolute;
+        top: 0;
+        color: #fff;
+        font-size: 1.5em;
+        margin-left: 20%;
+        margin-top: 40%
+    }
+    .ulAcademic a{
+        color: black;
+        font-size: 1em;
+        font-weight: bold;
+    }
+    .ulCulinary a{
+        color: black;
+        font-size: 1em;
+        font-weight: bold;
+    }
+    .ulAperitif a{
+        color: black;
+        font-size: 1em;
+        font-weight: bold;
+    }
+    .registration-container{
+        width: 75%;
+        padding-left: 40%;
+    }
+    .navbar-main .navbar-form input {
+        width: 120px;
+    }
+}
+@media (min-width: 992px) {
+    .main-nav a{
+        text-decoration: none;
+        text-transform: uppercase;
+        padding-right: 40px;
+        margin-left: 30px;
+        font-size: 150%;
+        font-weight: bold;
+        color: black;
+    }
+    .banner h1{
+        bottom: 45%;
+        text-align:left;
+        color: #fff;
+        font-size: 3.5em;
+        font-style: italic;
+    }
+    /*.banner p{
+      position: relative;
+      bottom: -105%;
+      width: 100%;
+      color: #fff;
+      text-align: left;
+      margin-left: 40%;
+      font-size: 190%;
+      font-weight: bold;
+      font-style: italic;
+    }*/
+    .product li {
+        text-align: center;
+    }
+    .ulAcademic a{
+        color: black;
+        font-size: 1.5em;
+        font-weight: bold;
+    }
+    .ulCulinary a{
+        color: black;
+        font-size: 1.5em;
+        font-weight: bold;
+    }
+    .ulAperitif a{
+        color: black;
+        font-size: 1.5em;
+        font-weight: bold;
+    }
+    #h2Academic {
+        position: absolute;
+        top: 0;
+        color: #fff;
+        font-size: 2em;
+        margin-left: 2%;
+        margin-top: 20%;
+    }
+    #h2Culinary {
+        position: absolute;
+        top: 0;
+        color: #fff;
+        font-size: 2em;
+        margin-left: 75%;
+    }
+    #h2Aperitif {
+        position: absolute;
+        top: 0;
+        color: #fff;
+        font-size: 2em;
+        margin-left: 20%;
+        margin-top: 50%
+    }
+    .registration-container input{
+        text-align: right;
+    }
+}
