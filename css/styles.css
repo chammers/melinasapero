@@ -108,25 +108,10 @@ ul, ol{
     font-size: 1.5em;
     background-color: #7D8E99;
     font-weight: bold;
+    color: #fff;
 }
-.footer p{
-    margin-left: 1%;
-}
-#logoFacebook{
-    width: 30px;
-    margin: 1%;
-    display: inline-block;
-}
-#logoTwitter{
-    width: 30px;
-    margin: 1%;
-    display: inline-block;
-}
-#logoInstagram{
-    width: 30px;
-    margin: 1%;
-    display: inline-block;
-
+.footer a {
+    color: #fff;
 }
 .faq{
     width: 90%;

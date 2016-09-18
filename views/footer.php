@@ -1,8 +1,6 @@
 <footer class="footer">
     <div class="container">
-        <p>
-            Follow us...
-        </p>
+        <h3>Follow us...</h3>
         <a href="www.facebook.com"><i class="fa fa-facebook-square fa-2x"></i></a>
         <a href="www.twitter.com"><i class="fa fa-twitter-square fa-2x"></i></a>
         <a href="www.instagram.com"><i class="fa fa-instagram fa-2x"></i></a>
