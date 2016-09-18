@@ -31,28 +31,12 @@ ul, ol{
     font-size: 150%;
     font-style: italic;
 }
-/*.banner p{
-  position: relative;
-  bottom: -100%;
-  width: 100%;
-  color: #fff;
-  text-align: left;
-  margin-left: 40%;
-  font-size: 190%;
-  font-weight: bold;
-  font-style: italic;
-}*/
 .img_product{
     width: 100%;
-    /*float: inherit;*/
 }
 .product{
     position: relative;
     padding-bottom: 5%;
-    /*background-image: url(../images/torre_eifel_dibujo.jpg);*/
-}
-#productMargin{
-    margin-right: 0;
 }
 .product ul{
     list-style-type: none;
@@ -64,43 +48,21 @@ ul, ol{
     text-decoration: none;
     text-transform: uppercase;
 }
-.ulAcademic a{
-    color: black;
-    font-size: 1em;
-    font-weight: bold;
-}
-.ulCulinary a{
-    color: black;
-    font-size: 1em;
-    font-weight: bold;
-}
-.ulAperitif a{
-    color: black;
-    font-size: 1em;
-    font-weight: bold;
-}
-#h2Academic {
+.product .product-title {
     position: absolute;
-    top: 0;
+    top: 7%;
+    left: 0;
+    right: 0;
+    margin: 0;
     color: #fff;
-    font-size: 1.5em;
-    margin-left: 2%;
-    margin-top: 20%;
+    background-color: rgba(0,0,0,0.5);
+    font-size: 2em;
+    text-align: center;
 }
-#h2Culinary {
-    position: absolute;
-    top: 0;
-    color: #fff;
+.product .nav a {
+    color: black;
     font-size: 1.5em;
-    margin-left: 45%;
-}
-#h2Aperitif {
-    position: absolute;
-    top: -10%;
-    color: #fff;
-    font-size: 1.5em;
-    margin-left: 20%;
-    margin-top: 50%
+    font-weight: bold;
 }
 .footer{
     clear: both;
@@ -185,57 +147,6 @@ ul, ol{
         text-align:left;
         font-size: 200%;
     }
-    /*.banner p{
-    position: relative;
-    bottom: -55%;
-    width: 100%;
-    color: #fff;
-    text-align: left;
-    margin-left: 15%;
-    font-size: 120%;
-    font-style: italic;
-    }*/
-    .product li {
-        text-align: center;
-    }
-    #h2Academic {
-        position: absolute;
-        top: 0;
-        color: #fff;
-        font-size: 1.5em;
-        margin-left: 2%;
-        margin-top: 20%;
-    }
-    #h2Culinary {
-        position: absolute;
-        top: 0;
-        color: #fff;
-        font-size: 1.5em;
-        margin-left: 55%;
-    }
-    #h2Aperitif {
-        position: absolute;
-        top: 0;
-        color: #fff;
-        font-size: 1.5em;
-        margin-left: 20%;
-        margin-top: 40%
-    }
-    .ulAcademic a{
-        color: black;
-        font-size: 1em;
-        font-weight: bold;
-    }
-    .ulCulinary a{
-        color: black;
-        font-size: 1em;
-        font-weight: bold;
-    }
-    .ulAperitif a{
-        color: black;
-        font-size: 1em;
-        font-weight: bold;
-    }
     .registration-container{
         width: 75%;
         padding-left: 40%;
@@ -260,58 +171,6 @@ ul, ol{
         color: #fff;
         font-size: 3.5em;
         font-style: italic;
-    }
-    /*.banner p{
-      position: relative;
-      bottom: -105%;
-      width: 100%;
-      color: #fff;
-      text-align: left;
-      margin-left: 40%;
-      font-size: 190%;
-      font-weight: bold;
-      font-style: italic;
-    }*/
-    .product li {
-        text-align: center;
-    }
-    .ulAcademic a{
-        color: black;
-        font-size: 1.5em;
-        font-weight: bold;
-    }
-    .ulCulinary a{
-        color: black;
-        font-size: 1.5em;
-        font-weight: bold;
-    }
-    .ulAperitif a{
-        color: black;
-        font-size: 1.5em;
-        font-weight: bold;
-    }
-    #h2Academic {
-        position: absolute;
-        top: 0;
-        color: #fff;
-        font-size: 2em;
-        margin-left: 2%;
-        margin-top: 20%;
-    }
-    #h2Culinary {
-        position: absolute;
-        top: 0;
-        color: #fff;
-        font-size: 2em;
-        margin-left: 75%;
-    }
-    #h2Aperitif {
-        position: absolute;
-        top: 0;
-        color: #fff;
-        font-size: 2em;
-        margin-left: 20%;
-        margin-top: 50%
     }
     .registration-container input{
         text-align: right;

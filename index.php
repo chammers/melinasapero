@@ -17,8 +17,8 @@ $pageTitle = 'Melina\'s Apéritif';
                 <div class="col-xs-12 col-sm-4">
                     <section class="product">
                         <img src="images/torre_eifel_lapiz.jpg" class="img_product" alt="torre_eifel_lapiz" />
-                        <h2 id='h2Academic'>Academic</h2>
-                        <ul class='ulAcademic'>
+                        <h2 class="product-title">Academic</h2>
+                        <ul class="nav nav-pills nav-stacked">
                             <li><a href="#">Consulting</a></li>
                             <li><a href="#">Courses</a></li>
                             <li><a href="#">Traslation</a></li>
@@ -29,8 +29,8 @@ $pageTitle = 'Melina\'s Apéritif';
                 <div class="col-xs-12 col-sm-4">
                     <section class="product">
                         <img src="images/quesos_vino2.jpg" class="img_product" alt="quesos_vino2" />
-                        <h2 id='h2Culinary'>Culinary</h2>
-                        <ul class='ulCulinary'>
+                        <h2 class="product-title">Culinary</h2>
+                        <ul class="nav nav-pills nav-stacked">
                             <li><a href="#">Restaurant</a></li>
                             <li><a href="#">Catering</a></li>
                             <li><a href="#">Consulting</a></li>
@@ -38,10 +38,10 @@ $pageTitle = 'Melina\'s Apéritif';
                     </section>
                 </div>
                 <div class="col-xs-12 col-sm-4">
-                    <section class="product" id='productMargin'>
+                    <section class="product">
                         <img src="images/aperitif.jpg" class="img_product" alt="aperitif" />
-                        <h2 id='h2Aperitif'>Apéritif</h2>
-                        <ul class='ulAperitif'>
+                        <h2 class="product-title">Apéritif</h2>
+                        <ul class="nav nav-pills nav-stacked">
                             <li><a href="#">Apéritif</a></li>
                         </ul>
                     </section>
