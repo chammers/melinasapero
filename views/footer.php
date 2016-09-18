@@ -8,5 +8,5 @@
         <a href="www.instagram.com"><img src="images/instagram.png" id='logoInstagram' alt="instagram"/></a>
     </div>
 </footer>
-<script src="js/jquery-3.1.0.min.js"></script>
-<script src="bootstrap/js/bootstrap.min.js"></script>
+<script src="vendor/jquery/jquery-3.1.0.min.js"></script>
+<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
