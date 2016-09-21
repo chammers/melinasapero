@@ -13,17 +13,31 @@
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
                     <li><a href=faq.php>About us</a></li>
-                    <li><a href="registration.php">Registration</a></li>
+                    <?php if (!isLoggedIn()) : ?>
+                        <li><a href="registration.php">Registration</a></li>
+                    <?php endif ?>
                 </ul>
-                <form class="loginform navbar-form navbar-right" method="post">
-                    <div class="form-group">
-                        <input type="email" name="email" id="email-login" placeholder="Email" class="form-control" required>
-                    </div>
-                    <div class="form-group">
-                        <input type="password" name="password" id="password-login" placeholder="Password" class="form-control" required>
-                    </div>
-                    <button type="submit" class="btn btn-primary"><i class="fa fa-sign-in"></i> Login</button>
-                </form>
+                <?php if (!isLoggedIn()) : ?>
+                    <form class="navbar-form navbar-right" method="post" action="login.php">
+                        <div class="form-group">
+                            <input type="email" name="email" id="email-login" placeholder="Email" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="password" name="password" id="password-login" placeholder="Password" class="form-control" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary"><i class="fa fa-sign-in"></i> Login</button>
+                    </form>
+                <?php else : ?>
+                    <ul class="nav navbar-nav navbar-right">
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><?= getLoggedUser()['name'] ?> <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="update-profile.php"><i class="fa fa-user"></i> Update Profile</a></li>
+                                <li><a href="logout.php"><i class="fa fa-sign-out"></i> Logout</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                <?php endif ?>
             </div>
         </div>
     </nav>
