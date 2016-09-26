@@ -35,15 +35,17 @@ $faqs = [
             <h1>F.A.Q.</h1>
             <section class="faq">
                 <ul class="list-unstyled">
-                    <?php foreach ($faqs as $faq) : ?>
+                    <?php foreach ($faqs as $i => $faq) : ?>
                         <li>
-                            <div class="panel panel-default">
-                                <div class="panel-heading">
-                                    <h3 class="panel-title question"><?= $faq['question'] ?></h3>
-                                </div>
-                                <div class="panel-body answer">
-                                    <?= $faq['answer'] ?>
-                                </div>
+                          <!-- js ocultar respuestas -->
+                            <div class="panel panel-default" onmouseover="mostrar(this)" onmouseout="ocultar(this)" data-oculto="<?= $i + 1 ?>">
+                              <div class="panel-heading" >
+                                  <h3 class="panel-title question"><?= $faq['question'] ?></h3>
+                              </div>
+                                <!-- js ocultar respuestas -->
+                              <div class="panel-body answer" id='oculto-<?= $i + 1?>' style="display:none;">
+                                  <?= $faq['answer'] ?>
+                              </div>
                             </div>
                         </li>
                     <?php endforeach; ?>
@@ -51,5 +53,15 @@ $faqs = [
           </section>
         </div>
     <?php require('views/footer.php') ?>
+        <script type="text/javascript">
+            function mostrar(element){
+                var oculto = element.getAttribute('data-oculto');
+                document.getElementById('oculto-'+oculto).style.display = 'block';
+            }
+            function ocultar(element){
+                var oculto = element.getAttribute('data-oculto');
+                document.getElementById('oculto-'+oculto).style.display = 'none';
+            }
+          </script>
     </body>
 </html>
