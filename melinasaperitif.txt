@@ -1,4 +1,21 @@
-Integrantes del equipo:
-Cristian Hammerstein
-Sabrina Elizondo
-"Enrique Gomez Alzaga"
+Melina's Aperitif
+
+En el presente Sprint se realizó una reorganización general de la estructura del proyecto.
+Migrando el frontend a Boostrap y Javascript. 
+Migrando la estructura principal a codigo PHP.
+
+
+Distribución del trabajo:
+HEMMERTEIN Cristian = Github y reorganización de estructura del proyecto.
+ELIZONDO Sabrina = Codigo JS de FAQs.
+GOMEZ ALZAGA Enrique = Bootstrap y reorganización de archivos en PHP. Modulo de registro.
+NAVARRO Agustin = Validación de formularion en JS. Modulo de registro.
+GUATTA Ariel = -
+
+
+Objetivo no alcanzado: Contador de usuarios registrados. 
+Motivo: El responsable asignado abandono el grupo, en la fecha de entrega, estando imposibilitados de cumplimentar con el requerimiento (GUATTA Ariel).
+
+
+
+

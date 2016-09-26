@@ -10,7 +10,7 @@ $pageTitle = 'Registration - Melina\'s Apéritif';
         <div class="container">
             <h1>Registration</h1>
             <div class="registration-container">
-                <form class="registration" action="index.html" method="post">
+                <form class="registration" method="post">
                     <div class="form-group">
                         <label for="email">Email</label>
                         <input type="email" name="email" id="email" class="form-control">
