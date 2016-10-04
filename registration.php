@@ -1,7 +1,7 @@
 <?php
 require_once('app/app.php');
 
-if (isLoggedIn()) {
+if (User::isLoggedIn()) {
     redirect('index.php');
 }
 
@@ -9,7 +9,9 @@ if ($_POST) {
     $errors = validateRegistration();
 
     if (empty($errors)) {
-        registerUser();
+        $data = getRegistrationFormData();
+        User::register($data);
+        
         redirect('index.php');
     }
 }

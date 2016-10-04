@@ -1,24 +1,26 @@
 <?php
 require_once('app/app.php');
 
-if (!isLoggedIn()) {
+if (!User::isLoggedIn()) {
     redirect('index.php');
 }
 
+$user = User::getLogged();
+
 if ($_POST) {
     if (isset($_POST['delete']) && $_POST['delete']) {
-        $user = getLoggedUser();
-        deleteUser($user);
+        $user->delete();
+        
         redirect('index.php');
     }
     $errors = validateUpdateProfile();
 
     if (empty($errors)) {
-        updateUserProfile();
+        $data = getUpdateProfileFormData();
+
+        $user->updateProfile($data);
     }
 }
-
-$user = getLoggedUser();
 
 //Título de la página que se usa en head.php
 $pageTitle = 'Update Profile - Melina\'s Apéritif';
@@ -34,27 +36,27 @@ $pageTitle = 'Update Profile - Melina\'s Apéritif';
                 <form class="registration" method="post">
                     <div class="form-group">
                         <label for="name">Name</label>
-                        <input type="text" name="name" id="name" class="form-control" value="<?= $user['name'] ?>">
+                        <input type="text" name="name" id="name" class="form-control" value="<?= $user->getName() ?>">
                     </div>
                     <div class="form-group">
                         <label for="lastname">Last name</label>
-                        <input type="text" name="lastname" id="lastname" class="form-control" value="<?= $user['lastname'] ?>">
+                        <input type="text" name="lastname" id="lastname" class="form-control" value="<?= $user->getLastName() ?>">
                     </div>
                     <div class="form-group">
                         <label for="age">Age</label>
-                        <input type="number" name="age" id="age" class="form-control" min="0" value="<?= $user['age'] ?>">
+                        <input type="number" name="age" id="age" class="form-control" min="0" value="<?= $user->getAge() ?>">
                     </div>
                     <div class="form-group">
                         <label>Gender</label><br>
                         <label for="male">
-                            <?php if ($user['gender'] == 'male') : ?>
+                            <?php if ($user->getGender() == 'male') : ?>
                                 <input type="radio" name="gender" value="male" id="male" checked> Male
                             <?php else : ?>
                                 <input type="radio" name="gender" value="male" id="male"> Male
                             <?php endif ?>
                         </label>
                         <label for="female">
-                            <?php if ($user['gender'] == 'female') : ?>
+                            <?php if ($user->getGender() == 'female') : ?>
                                 <input type="radio" name="gender" value="female" id="female" checked> Female
                             <?php else : ?>
                                 <input type="radio" name="gender" value="female" id="female"> Female
@@ -63,7 +65,7 @@ $pageTitle = 'Update Profile - Melina\'s Apéritif';
                     </div>
                     <div class="form-group">
                         <label for="phone">Phone</label>
-                        <input type="text" name="phone" id="phone" class="form-control" value="<?= $user['phone'] ?>">
+                        <input type="text" name="phone" id="phone" class="form-control" value="<?= $user->getPhone() ?>">
                     </div>
                     <div class="form-group">
                         <button type="submit" class="btn btn-primary">Send</button>

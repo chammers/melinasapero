@@ -1,5 +1,12 @@
 <?php
 require_once('app/app.php');
 
-logOut();
+$user = User::getLogged();
+
+if (!$user) {
+    redirect('index.php');
+}
+
+$user->logOut();
+
 redirect('index.php');
