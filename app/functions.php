@@ -4,6 +4,14 @@ function redirect($location) {
      exit;
 }
 
+/**
+ * @return Auth
+ */
+function auth()
+{
+    return Auth::getInstance();
+}
+
 function getRegistrationFormData() {
     $data = [
         'email' => filter_input(INPUT_POST, 'email', FILTER_VALIDATE_EMAIL),

@@ -1,7 +1,7 @@
 <?php
 require_once('app/app.php');
 
-if (User::isLoggedIn()) {
+if (auth()->isLoggedIn()) {
     redirect('index.php');
 }
 
@@ -9,7 +9,7 @@ if ($_POST) {
     $errors = validateLogin($user);
 
     if (empty($errors)) {
-        $user->logIn();
+        auth()->logIn($user);
         redirect('index.php');
     }
 }

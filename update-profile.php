@@ -1,11 +1,11 @@
 <?php
 require_once('app/app.php');
 
-if (!User::isLoggedIn()) {
+if (!auth()->isLoggedIn()) {
     redirect('index.php');
 }
 
-$user = User::getLogged();
+$user = auth()->getLogged();
 
 if ($_POST) {
     if (isset($_POST['delete']) && $_POST['delete']) {

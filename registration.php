@@ -1,7 +1,7 @@
 <?php
 require_once('app/app.php');
 
-if (User::isLoggedIn()) {
+if (auth()->isLoggedIn()) {
     redirect('index.php');
 }
 

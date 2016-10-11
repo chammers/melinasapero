@@ -175,44 +175,6 @@ class User
         return isset($this->id);
     }
 
-    public static function isLoggedIn()
-    {
-        return isset($_SESSION['user_id']);
-    }
-
-    /**
-     *
-     * @return boolean|User
-     */
-    public static function getLogged()
-    {
-        if (!self::isLoggedIn()) {
-            return false;
-        }
-
-        return self::getById($_SESSION['user_id']);
-    }
-
-    public function logOut()
-    {
-        session_destroy();
-        setcookie('user_id', '', -1);
-    }
-
-    public function logIn($remember = false)
-    {
-        if ($remember) {
-            $this->setCookie();
-        }
-        
-        $_SESSION['user_id'] = $this->id;
-    }
-
-    protected function setCookie()
-    {
-        setcookie('user_id', $this->id, time() + 60 * 60 * 24);
-    }
-
     public function delete()
     {
         //Elimino el usuario del storage
@@ -223,29 +185,5 @@ class User
 
         //Deslogueo el usuario
         $this->logOut();
-    }
-
-    public static function autoLogin()
-    {
-        //Si ya está logueado, no hago nada
-        if (self::isLoggedIn()) {
-            return;
-        }
-
-        //Si no tiene la cookie seteada no hago nada
-        if (!isset($_COOKIE['user_id'])) {
-            return;
-        }
-
-        $user = self::getHandler()->getById($_COOKIE['user_id']);
-
-        //Si no encuentro un usuario para el id dado no hago nada
-        if (!$user) {
-            return;
-        }
-
-        //Si llega hasta acá quiere decir que no está logueado y tiene seteada la
-        //cookie con un id de usuario válido
-        $user->logIn();
     }
 }
