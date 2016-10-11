@@ -1,6 +1,6 @@
 <?php
 if (!isset($errors)) {
-    $errores = [];
+    $errors = [];
 }
 
 if (!empty($errors)) : ?>
