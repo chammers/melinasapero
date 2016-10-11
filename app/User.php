@@ -102,15 +102,7 @@ class User
         $this->phone = $phone;
     }
 
-    /**
-     * @return UserHandler
-     */
-    private static function getHandler()
-    {
-        return new UserFileHandler();
-    }
-
-    public static function register(array $data)
+    public static function register(UserRepository $userRepo, array $data)
     {
         $email = $data['email'];
         $password = password_hash($data['password'], PASSWORD_DEFAULT);
@@ -122,12 +114,12 @@ class User
         
         $user = new User($email, $password, $name, $lastName, $age, $gender, $phone);
 
-        $user->save();
+        $userRepo->save($user);
 
         return $user;
     }
 
-    public function updateProfile(array $data)
+    public function updateProfile(UserRepository $userRepo, array $data)
     {
         $this->setName($data['name']);
         $this->setLastName($data['lastname']);
@@ -135,39 +127,7 @@ class User
         $this->setGender($data['gender']);
         $this->setPhone($data['phone']);
 
-        return $this->save();
-    }
-
-    public function save()
-    {
-        return self::getHandler()->save($this);
-    }
-
-    /**
-     * @param int $id
-     * @return User
-     */
-    public static function getById($id)
-    {
-        return self::getHandler()->getById($id);
-    }
-
-    /**
-     * @param string $email
-     * @return User
-     */
-    public static function getByEmail($email)
-    {
-        return self::getHandler()->getByEmail($email);
-    }
-
-    /**
-     * @param string $email
-     * @return boolean
-     */
-    public static function emailExists($email)
-    {
-        return self::getHandler()->emailExists($email);
+        return $userRepo->save($this);
     }
 
     public function exists()
@@ -175,15 +135,17 @@ class User
         return isset($this->id);
     }
 
-    public function delete()
+    public function toArray()
     {
-        //Elimino el usuario del storage
-        self::getHandler()->delete($this);
-
-        //Des-seteo el id del usuario
-        $this->setId(null);
-
-        //Deslogueo el usuario
-        $this->logOut();
+        return [
+            'id' => $this->getId(),
+            'email' => $this->getEmail(),
+            'password' => $this->getPassword(),
+            'name' => $this->getName(),
+            'lastname' => $this->getLastName(),
+            'age' => $this->getAge(),
+            'gender' => $this->getGender(),
+            'phone' => $this->getPhone()
+        ];
     }
 }

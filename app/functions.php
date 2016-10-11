@@ -4,14 +4,6 @@ function redirect($location) {
      exit;
 }
 
-/**
- * @return Auth
- */
-function auth()
-{
-    return Auth::getInstance();
-}
-
 function getRegistrationFormData() {
     $data = [
         'email' => filter_input(INPUT_POST, 'email', FILTER_VALIDATE_EMAIL),
@@ -49,7 +41,7 @@ function getUpdateProfileFormData() {
     return $data;
 }
 
-function validateRegistration() {
+function validateRegistration(UserRepository $userRepo) {
     $errors = [];
 
     $validGenders = ['male', 'female'];
@@ -60,7 +52,7 @@ function validateRegistration() {
     if (!$data['email']) {
         $errors['email'] = 'Enter a valid email';
     }
-    if (User::emailExists($data['email'])) {
+    if ($userRepo->emailExists($data['email'])) {
         $errors['email'] = 'The email is already registered';
     }
     if (!$data['password']) {
@@ -88,7 +80,7 @@ function validateRegistration() {
     return $errors;
 }
 
-function validateLogin(&$user) {
+function validateLogin(UserRepository $userRepo, &$user) {
     $errors = [];
 
     $data = getLoginFormData();
@@ -100,7 +92,7 @@ function validateLogin(&$user) {
         $errors['password'] = 'Enter password';
     }
 
-    $user = User::getByEmail($data['email']);
+    $user = $userRepo->getByEmail($data['email']);
 
     if (!$user) {
         $errors['email'] = 'The email is not registered';

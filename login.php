@@ -1,15 +1,15 @@
 <?php
 require_once('app/app.php');
 
-if (auth()->isLoggedIn()) {
+if ($auth->isLoggedIn()) {
     redirect('index.php');
 }
 
 if ($_POST) {
-    $errors = validateLogin($user);
+    $errors = validateLogin($userRepo, $user);
 
     if (empty($errors)) {
-        auth()->logIn($user);
+        $auth->logIn($user);
         redirect('index.php');
     }
 }

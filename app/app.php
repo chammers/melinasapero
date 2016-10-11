@@ -6,8 +6,16 @@ define('BASE_PATH', dirname(__FILE__).DIRECTORY_SEPARATOR.'..'.DIRECTORY_SEPARAT
 require('functions.php');
 require('Auth.php');
 require('User.php');
-require('UserHandler.php');
-require('UserFileHandler.php');
+require('Repository.php');
+require('JSONRepository.php');
+require('UserRepository.php');
+require('JSONUserRepository.php');
 
-auth()->autoLogIn();
+$repo = new JSONRepository();
+
+$userRepo = $repo->getUserRepo();
+
+$auth = Auth::getInstance($userRepo);
+
+$auth->autoLogIn();
 

@@ -1,15 +1,24 @@
 <?php
 require_once('app/app.php');
 
-if (!auth()->isLoggedIn()) {
+if (!$auth->isLoggedIn()) {
     redirect('index.php');
 }
 
-$user = auth()->getLogged();
+$user = $auth->getLogged();
 
 if ($_POST) {
     if (isset($_POST['delete']) && $_POST['delete']) {
-        $user->delete();
+        //Elimino el usuario del storage
+        $userRepo->delete($user);
+
+        //Des-seteo el id del usuario (en este script no sirve de nada. Podría
+        //servir si después se hace algo con el objeto usuario que dependa de si
+        //existe o no en el storage
+        $user->setId(null);
+
+        //Deslogueo el usuario
+        $auth->logOut();
         
         redirect('index.php');
     }
@@ -18,7 +27,7 @@ if ($_POST) {
     if (empty($errors)) {
         $data = getUpdateProfileFormData();
 
-        $user->updateProfile($data);
+        $user->updateProfile($userRepo, $data);
     }
 }
 

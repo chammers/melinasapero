@@ -4,18 +4,23 @@ class Auth
 {
     private static $instance;
 
-    private function __construct()
+    /**
+     * @var UserRepository
+     */
+    private $userRepo;
+
+    private function __construct(UserRepository $userRepo)
     {
-        
+        $this->userRepo = $userRepo;
     }
 
     /**
      * @return Auth
      */
-    public static function getInstance()
+    public static function getInstance(UserRepository $userRepo)
     {
         if (!isset(self::$instance)) {
-            self::$instance = new Auth();
+            self::$instance = new Auth($userRepo);
         }
         return self::$instance;
     }
@@ -47,7 +52,7 @@ class Auth
         if (!self::isLoggedIn()) {
             return false;
         }
-        return User::getById($_SESSION['user_id']);
+        return $this->userRepo->getById($_SESSION['user_id']);
     }
 
     public function autoLogIn()
@@ -62,7 +67,7 @@ class Auth
             return;
         }
 
-        $user = User::getById($_COOKIE['user_id']);
+        $user = $this->userRepo->getById($_COOKIE['user_id']);
 
         //Si no encuentro un usuario para el id dado no hago nada
         if (!$user) {

@@ -1,16 +1,16 @@
 <?php
 require_once('app/app.php');
 
-if (auth()->isLoggedIn()) {
+if ($auth->isLoggedIn()) {
     redirect('index.php');
 }
 
 if ($_POST) {
-    $errors = validateRegistration();
+    $errors = validateRegistration($userRepo);
 
     if (empty($errors)) {
         $data = getRegistrationFormData();
-        User::register($data);
+        User::register($userRepo, $data);
         
         redirect('index.php');
     }

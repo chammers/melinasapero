@@ -1,6 +1,6 @@
 <?php
 require_once('app/app.php');
 
-auth()->logOut();
+$auth->logOut();
 
 redirect('index.php');
