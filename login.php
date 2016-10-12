@@ -5,17 +5,19 @@ if ($auth->isLoggedIn()) {
     redirect('index.php');
 }
 
-if ($_POST) {
-    $errors = validateLogin($userRepo, $user);
+$validator = new LogInValidator($repo);
 
-    if (empty($errors)) {
-        $auth->logIn($user);
+if ($_POST) {
+    if ($validator->passes()) {
+        $auth->logIn($userRepo->getByEmail($validator->getData('email')));
         redirect('index.php');
     }
+
+    $errors = $validator->getErrors();
 }
 
 //Obtengo los datos del formulario enviados por POST.
-$data = getLoginFormData();
+$data = $validator->getData();
 
 //Título de la página que se usa en head.php
 $pageTitle = 'Login - Melina\'s Apéritif';

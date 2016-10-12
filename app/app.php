@@ -10,6 +10,10 @@ require('Repository.php');
 require('JSONRepository.php');
 require('UserRepository.php');
 require('JSONUserRepository.php');
+require('Validator.php');
+require('RegisterUserValidator.php');
+require('LoginValidator.php');
+require('UpdateProfileValidator.php');
 
 $repo = new JSONRepository();
 

@@ -7,6 +7,8 @@ if (!$auth->isLoggedIn()) {
 
 $user = $auth->getLogged();
 
+$validator = new UpdateProfileValidator($repo);
+
 if ($_POST) {
     if (isset($_POST['delete']) && $_POST['delete']) {
         //Elimino el usuario del storage
@@ -22,12 +24,13 @@ if ($_POST) {
         
         redirect('index.php');
     }
-    $errors = validateUpdateProfile();
 
-    if (empty($errors)) {
-        $data = getUpdateProfileFormData();
+    if ($validator->passes()) {
+        $data = $validator->getData();
 
         $user->updateProfile($userRepo, $data);
+    } else {
+        $errors = $validator->getErrors();
     }
 }
 

@@ -5,19 +5,22 @@ if ($auth->isLoggedIn()) {
     redirect('index.php');
 }
 
-if ($_POST) {
-    $errors = validateRegistration($userRepo);
+$validator = new RegisterUserValidator($repo);
 
-    if (empty($errors)) {
-        $data = getRegistrationFormData();
+//Obtengo los datos del formulario enviados por POST.
+$data = $validator->getData();
+
+if ($_POST) {
+    if ($validator->passes()) {
         User::register($userRepo, $data);
         
         redirect('index.php');
     }
+
+    $errors = $validator->getErrors();
 }
 
-//Obtengo los datos del formulario enviados por POST.
-$data = getRegistrationFormData();
+
 
 //Título de la página que se usa en head.php
 $pageTitle = 'Registration - Melina\'s Apéritif';
