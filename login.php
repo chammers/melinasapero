@@ -41,14 +41,14 @@ $pageTitle = 'Login - Melina\'s Apéritif';
                         <input type="password" name="password" id="password" class="form-control">
                     </div>
                     <div class="form-group">
-                        <label for="remember">
-                            <?php if ($data['remember']) : ?>
-                                <input type="checkbox" name="remember" id="remember" value="1" checked> Remember me
-                            <?php else : ?>
-                                <input type="checkbox" name="remember" id="remember" value="1"> Remember me
-                            <?php endif ?>
-                        </label>
-                    </div>
+                         <label for="remember">
+                             <?php if ($data['remember']) : ?>
+                                 <input type="checkbox" name="remember" id="remember" value="1" checked> Remember me
+                             <?php else : ?>
+                                 <input type="checkbox" name="remember" id="remember" value="1"> Remember me
+                             <?php endif ?>
+                         </label>
+                     </div>
                     <div class="form-group">
                         <button type="submit" class="btn btn-primary">Login</button>
                     </div>
