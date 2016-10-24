@@ -1,4 +1,6 @@
 <?php
+require_once('app/app.php');
+
 //Título de la página que se usa en head.php
 $pageTitle = 'Melina\'s Apéritif';
 ?>
