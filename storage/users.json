@@ -2,3 +2,4 @@
 {"id":3,"email":"mail3@mail.com","password":"$2y$10$nVL6QDljTwujfup81\/fpzOH.NhNj7ZCqOz0xePHsapDRNlrN362Wi","name":"Juan F","lastname":"Perez","age":34,"gender":"male","phone":"123"}
 {"id":4,"email":"mail4@mail.com","password":"$2y$10$mumW8D8KryQiopoPRqPeXuO9ltPsGrRniZARIMtAjRjeLvwg1anQ2","name":"Enrique","lastname":"Gomez Alzaga","age":23,"gender":"male","phone":"3123123"}
 {"id":5,"email":"mail@mail.com","password":"$2y$10$Quy7mjSTfosLN0UG62duLO3JpQLLF0e\/OpaEc.NLtPQrnsTFGI5Gm","name":"Fernando","lastname":"Sanchez","age":46,"gender":"male","phone":"1234"}
+{"id":6,"email":"sabrielizondo@hotmail.com","password":"$2y$10$inkqxfvMLYVwFXt077u5M.UBDEl3\/\/lBsbIhCNI3HVwg5Ymvcuud.","name":"Sabrina","lastname":"Elizondo","age":34,"gender":"female","phone":"1535868600"}
