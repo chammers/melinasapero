@@ -4,22 +4,21 @@ session_start();
 define('BASE_PATH', dirname(__FILE__).DIRECTORY_SEPARATOR.'..'.DIRECTORY_SEPARATOR);
 
 require('functions.php');
-require('Auth.php');
-require('User.php');
-require('Repository.php');
-require('JSONRepository.php');
-require('UserRepository.php');
-require('JSONUserRepository.php');
-require('Validator.php');
-require('RegisterUserValidator.php');
-require('LoginValidator.php');
-require('UpdateProfileValidator.php');
+require('auth.php');
+require('user.php');
+require('repository.php');
+require('jsonRepository.php');
+require('userRepository.php');
+require('jsonUserRepository.php');
+require('validator.php');
+require('registerUserValidator.php');
+require('loginValidator.php');
+require('updateProfileValidator.php');
 
-$repo = new JSONRepository();
+$repo = new jsonRepository();
 
 $userRepo = $repo->getUserRepo();
 
-$auth = Auth::getInstance($userRepo);
+$auth = auth::getInstance($userRepo);
 
 $auth->autoLogIn();
-
