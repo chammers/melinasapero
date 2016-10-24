@@ -40,7 +40,7 @@ $faqs = [
                     <?php foreach ($faqs as $i => $faq) : ?>
                         <li>
                           <!-- js ocultar respuestas -->
-                            <div class="panel panel-default" onmouseover="mostrar(this)" onmouseout="ocultar(this)" data-oculto="<?= $i + 1 ?>">
+                            <div class="panel panel-default" onclick ="mostrar(this)" ondblclick="ocultar(this)" data-oculto="<?= $i + 1 ?>">
                               <div class="panel-heading" >
                                   <h3 class="panel-title question"><?= $faq['question'] ?></h3>
                               </div>
