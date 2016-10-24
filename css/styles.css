@@ -57,13 +57,13 @@ body {
 }
 .product .nav a {
     color: black;
-    font-size: 1.5em;
+    font-size: 1em;
     font-weight: bold;
 }
 .footer{
     clear: both;
     padding-top: 0.5%;
-    font-size: 1.5em;
+    font-size: 1em;
     background-color: #7D8E99;
     font-weight: bold;
     color: #fff;
